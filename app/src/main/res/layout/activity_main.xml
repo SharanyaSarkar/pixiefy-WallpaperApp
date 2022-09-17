@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:id="@+id/toolBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:padding="8dp"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"
+            android:text="PixieFy"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/searchLayout"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abril_fatface"
+            android:hint="Search wallpapers here"
+            android:background="@drawable/gradientsearch"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp">
+
+        </EditText>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/searchButton"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_search_foreground"
+            android:layout_marginLeft="-50dp"
+            android:tint="@color/white"/>
+
+
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_margin="6dp"
+        android:id="@+id/buttonLayout"
+        android:layout_below="@id/searchLayout"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_nature"
+                android:backgroundTint="@color/black"
+                android:text="Nature"
+
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_dog"
+                android:text="Dog"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_trend"
+                android:text="Trending"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_sky"
+                android:text="sky"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_texture"
+                android:text="Texture"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_Ocean"
+                android:text="Ocean"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_flower"
+                android:text="Flower"
+                android:backgroundTint="@color/black"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_margin="6dp">
+
+            </Button>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonLayout"
+
+        android:padding="2dp" />
+
+</RelativeLayout>
